@@ -1,0 +1,22 @@
+@mixin transition($prop, $time, $funct) {
+	transition: $prop $time $funct;
+	-webkit-transition: $prop $time $funct;
+	-moz-transition: $prop $time $funct;
+	-o-transition: $prop $time $funct;
+	-ms-transition: $prop $time $funct;
+}
+
+@mixin btn-hover{
+	&:hover{
+		color: $header-color;
+		border-color: $font-color;
+		@include transition($prop, $time, $funct);
+	}
+}
+
+@mixin a-hover{
+	&:hover{
+		background: $header-color;
+		@include transition($prop, $time, $funct);
+	}
+}
